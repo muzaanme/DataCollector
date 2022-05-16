@@ -12,11 +12,44 @@
         <p>Thank you for your Submission! <br>
         your height is <strong>{{ heights }}</strong> and the average height for all is <strong>{{ avg }}</strong>
         </p>
-        <button type="button">Display all</button>
-        <form action="{{url_for ('Home')}}" method="POST">
-            <button class="all" type="submit">Home</button>
-        </form>
+       <h1>Current Data for all people</h1>
+        <div>
+            <table class="center">
+                <tr>
+                    <th>Name</th>
+                    {% for dataName in userName %}
+                    <td>
+                        {{ dataName.name }}
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th style="text-align: center;">Email</th>
+                    {% for dataEmail in mail %}
+                    <td>
+                        {{ dataEmail.email_ }}
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <th>Height</th>
+                    {% for dataHeight in heit %}
+                    <td>
+                        {{ dataHeight.height_ }}
+                    </td>
+                    {% endfor %}
+                </tr>
+            </table>
+            <form action="{{url_for('Home')}}" method="POST">
+                <button type="button" class="button2">Home</button>
+            </form>
+        </div>
+        
     </div>
+
+    
+
+    
 
    
 </body>

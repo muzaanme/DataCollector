@@ -8,6 +8,7 @@
     <title>Data Collector</title>
     <link rel="stylesheet" href="../static/style.css">
     
+    
 </head>
 
 <body>
@@ -18,17 +19,18 @@
             {{text | safe}}
         </div>
         <form action="{{url_for ('successPage')}}" method="POST">
+            <input type="text" placeholder="Enter your name" name = "user_name" required><br>
             <input type="email" title="Your Email will be safe with us" placeholder="Enter your Email Address" name="email_name" required><br>
             <input type="number" min="50" max="300" title="Your data will be safe with us" placeholder="Enter your height in CM" name="height_name" required><br>
             <button type="submit" class="button1"> Save </button>
-            <button type="reset" value="Reset" class="button2">Reset</button>
+            <button type="reset" value="Reset" class="button2"> Reset </button>
             
 
         </form>
     </div>
 
 
-    
+   
 </body>
 
 </html>
