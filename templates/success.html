@@ -12,6 +12,12 @@
         <p>Thank you for your Submission! <br>
         your height is <strong>{{ heights }}</strong> and the average height for all is <strong>{{ avg }}</strong>
         </p>
+        <button type="button">Display all</button>
+        <form action="{{url_for ('Home')}}" method="POST">
+            <button class="all" type="submit">Home</button>
+        </form>
     </div>
+
+   
 </body>
 </html>

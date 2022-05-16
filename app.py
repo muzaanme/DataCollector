@@ -27,6 +27,11 @@ class Data(db.Model):
 def index():
     return render_template("index.html")
 
+@app.route("/Home", methods = ["POST"])
+def Home():
+    if request.method == "POST":
+        return index()
+
 
 @app.route("/success", methods =["POST"])
 def successPage():
@@ -40,6 +45,9 @@ def successPage():
             db.session.commit()
             average_height = db.session.query(func.avg(Data.height_)).scalar()
             average_height = round(average_height, 1)
+            #view_all = db.session.query(Data.email_).all()
+            # for entries in view_all:
+            #     print(entries)
             print(average_height)
             return render_template("success.html", heights=height, avg = average_height)
         return render_template("index.html",
