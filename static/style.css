@@ -70,11 +70,15 @@ html,body{
 
 table, th, td {
     border: 1px solid black;
-    /* border-collapse: collapse; */
+    border-collapse: collapse;
     border-style: inset;
     border-color:brown;
     border-width: 1px;
     display: table;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    
     
 
 }
@@ -92,6 +96,9 @@ table tr{
 table tr td{
     display: block;
     text-align: center;
+    justify-content: center;
+   
+    
 }
 
 table th{
