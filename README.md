@@ -1,7 +1,7 @@
 
 # Data Collector App
 ---
-An App that collects your Name, Email and Height and stores the collected information, further displaying the Average Height for all.
+An App that collects your Name, Email and Height and stores the collected information, further displaying the Average height for all.
 
 ## Requirements
 - Flask 2.1.2
